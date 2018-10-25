@@ -1,0 +1,57 @@
+﻿@model SoHot.Web.Models.CustomerViewModel
+@{
+    ViewBag.Title = "CheckInformation";
+    Layout = "~/Views/Shared/Layouts.cshtml";
+}
+
+
+<div class="col-md-6">
+    <div class="sidebar-wrap">
+        <div class="side search-wrap animate-box">
+            <h3 class="sidebar-heading">Check your information</h3>
+            <form method="post" class="colorlib-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="guests">Name : @Model.Name</label></br>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="guests">Email:  @Model.Email</label></br>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="guests">Phone number : @Model.Phone</label>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="guests">Nationality : @Model.Nationality</label>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="guests">Birthdate : @Model.DateOfBirth</label>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="guests">Passport number : @Model.PassportNumber</label>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+@{Html.RenderAction("RoomBooking", "Reservation", new { id = (int)@ViewBag.RoomID });}
+
+   

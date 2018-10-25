@@ -1,0 +1,238 @@
+﻿@model IEnumerable<SoHot.Web.Models.RoomTypeViewModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layouts.cshtml";
+}
+
+<div id="colorlib-services">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-md-3 animate-box text-center aside-stretch">
+                <div class="services">
+                    <span class="icon">
+                        <i class="flaticon-around"></i>
+                    </span>
+                    <h3>Amazing Service</h3>
+                    <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies</p>
+                </div>
+            </div>
+            <div class="col-md-3 animate-box text-center">
+                <div class="services">
+                    <span class="icon">
+                        <i class="flaticon-boat"></i>
+                    </span>
+                    <h3>Our Cruises</h3>
+                    <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies</p>
+                </div>
+            </div>
+            <div class="col-md-3 animate-box text-center">
+                <div class="services">
+                    <span class="icon">
+                        <i class="flaticon-car"></i>
+                    </span>
+                    <h3>Book Your Trip</h3>
+                    <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies</p>
+                </div>
+            </div>
+            <div class="col-md-3 animate-box text-center">
+                <div class="services">
+                    <span class="icon">
+                        <i class="flaticon-postcard"></i>
+                    </span>
+                    <h3>Nice Support</h3>
+                    <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="colorlib-tour colorlib-light-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
+                <h2>Room Type</h2>
+                <p>Choose Room Type suitable for you.</p>
+            </div>
+        </div>
+    </div>
+    <div class="tour-wrap">
+        @foreach (var item in Model)
+        {
+
+            <a href="/room/category/@item.ID" class="tour-entry animate-box">
+                <div class="tour-img" style="background-image: url(@item.Image);">
+                </div>
+                <span class="desc">
+                    <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+                    <h2>@item.Name</h2>
+                    <span class="city">@item.Alias</span>
+                    <span class="price">Từ $450</span>
+                </span>
+            </a>
+        }
+
+    </div>
+</div>
+
+
+<div id="colorlib-blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
+                <h2>Our View</h2>
+                <p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            </div>
+        </div>
+        <div class="blog-flex">
+            <div class="f-entry-img" style="background-image:url(/Assets/client/images/blog-3.jpg);">
+            </div>
+            <div class="blog-entry aside-stretch-right">
+                <div class="row">
+                    <div class="col-md-12 animate-box">
+                        <div class="blog-post">
+                            <span class="img" style="background-image: url(/Assets/client/images/blog-1.jpg);"></span>
+
+                            <div class="desc">
+
+                                <h3>Best View</h3>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 animate-box">
+                        <div class="blog-post">
+                            <span class="img" style="background-image: url(/Assets/client/images/blog-2.jpg);"></span>
+                            <div class="desc">
+
+                                <h3>New experiant</h3>
+
+                            </div>
+                        </div>
+                        </div>
+                    <div class="col-md-12 animate-box">
+                        <div class="blog-post">
+                            <span class="img" style="background-image: url(/Assets/client/images/blog-4.jpg);"></span>;"></span>
+                            <div class="desc">
+
+                                <h3>Lot of room for you</h3>
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="colorlib-intro" class="intro-img" style="background-image: url(/Assets/client/images/cover-img-1.jpg);" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 animate-box">
+                <div class="intro-desc">
+                    <div class="text-salebox">
+                        <div class="text-lefts">
+                            <div class="sale-box">
+                                <div class="sale-box-top">
+                                    <h2 class="number">45</h2>
+                                    <span class="sup-1">%</span>
+                                    <span class="sup-2">Off</span>
+                                </div>
+                                <h2 class="text-sale">Sale</h2>
+                            </div>
+                        </div>
+                        <div class="text-rights">
+                            <h3 class="title">Just hurry up limited offer!</h3>
+                            <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                            <p><a href="#" class="btn btn-primary">Book Now</a> <a href="#" class="btn btn-primary btn-outline">Read more</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 animate-box">
+                <div class="video-wrap">
+                    <div class="video colorlib-video" style="background-image: url(/Assets/client/images/img_bg_2.jpg);">
+                        <a href="https://www.youtube.com/watch?v=qFLhGq0060w" class="popup-vimeo"><i class="icon-video"></i></a>
+                        <div class="video-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@{Html.RenderAction("RoomRecommend", "Home");}
+
+<div id="colorlib-testimony" class="colorlib-light-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
+                <h2>Our Satisfied Guests says</h2>
+                <p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 animate-box">
+                <div class="owl-carousel2">
+                    <div class="item">
+                        <div class="testimony text-center">
+                            <span class="img-user" style="background-image: url(/Assets/client/images/person5.jpg);"></span>
+
+                            <span class="user">Captain America</span>
+                            <small>USA</small>
+                            <blockquote>
+                                <p>" A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony text-center">
+                            <span class="img-user" style="background-image: url(/Assets/client/images/person6.jpg);"></span>
+                            <span class="user">Thor</span>
+                            <small>Asgard</small>
+                            <blockquote>
+                                <p>One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony text-center">
+                            <span class="img-user" style="background-image: url(/Assets/client/images/person7.jpg);"></span>
+                            <span class="user">Doctor strange</span>
+                            <small>Athens, Greece</small>
+                            <blockquote>
+                                <p>Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="colorlib-subscribe" style="background-image: url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
+                <h2>Sign Up for a Newsletter</h2>
+                <p>Sign up for our mailing list to get latest updates and offers.</p>
+                <form class="form-inline qbstp-header-subscribe">
+                    <div class="row">
+                        <div class="col-md-12 col-md-offset-0">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="email" placeholder="Enter your email">
+                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,15 @@
+﻿
+@model IEnumerable<SoHot.Web.Models.RoomTypeViewModel>
+
+<!-- Gallery -->
+<ul class="resp-tabs-list">
+
+    @foreach (var roomtype in Model)
+    {
+      
+
+        var url = "/Home/Index/" + roomtype.ID;
+        <li><a href="@url">@roomtype.Name</a></li>
+
+    }
+</ul>

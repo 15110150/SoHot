@@ -1,0 +1,128 @@
+﻿@model SoHot.Web.Models.RoomViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layouts.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="wrap-division">
+                <div class="col-md-12 col-md-offset-0 heading2 animate-box">
+                    <h2>Booking </h2>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-12 animate-box">
+                        <div class="room-wrap">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="room-img" style="background-image: url(@Model.Image);"></div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="desc">
+                                        <h2>@Model.Name</h2>
+                                        <p class="price"><span>@Model.Price</span> <small>/ night</small></p>
+                                        <p>@Model.Description</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<p></p>
+<div class="col-md-8">
+    <div class="sidebar-wrap">
+        <div class="side search-wrap animate-box">
+            <h3 class="sidebar-heading">Please fill your information</h3>
+            <form method="post" class="colorlib-form" action="/reservation/CheckInformation">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="date">Your name</label>
+                            <div class="form-field">
+                                <input name="name" type="text" id="name" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="date">Your email</label>
+                            <div class="form-field">
+                                <input name="email" type="text" id="email" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="date">Mobile Number:</label>
+                            <div class="form-field">
+                                <input name="phone" type="text" id="phone" class="form-control" placeholder="+(084)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="date">Passport Number</label>
+                            <div class="form-field">
+                                <i class="icon icon-calendar2"></i>
+                                <input name="passport" type="text" id="passport" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="date">Nationality</label>
+                            <div class="form-field">
+                                <inpu name="nationality" type="text" id="nationality" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="date">BirhtDate</label>
+                            <div class="form-field">
+                                <input name="birth" type="text" id="birth" class="form-control date" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="date">Your Address</label>
+                            <div class="form-field">
+                                <input name="address" type="text" id="address" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-12">
+                        <label for="guests">Any question ?</label></br>
+
+                        <label for="guests">We'll inform your property or host as soon as you book!</label></br>
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="submit" name="submit" id="submit" value="Continude" class="btn btn-primary btn-block">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+@{Html.RenderAction("RoomBooking", "Reservation");}
+

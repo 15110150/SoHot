@@ -1,0 +1,39 @@
+﻿@model SoHot.Web.Models.RoomViewModel
+
+<div class="col-md-4">
+    <div class="sidebar-wrap">
+        <div class="side search-wrap animate-box">
+            <h3 class="sidebar-heading">Check room information</h3>
+            <form method="post" class="colorlib-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="guests">Check In : @ViewBag.checkIn</label></br>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="guests">Check Out:  @ViewBag.checkOut</label></br>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="guests">Guest : @ViewBag.maxPeople</label>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="guests">Your Room details: </label></br>
+                        <label for="guests">Room name : @Model.Name</label></br>
+                        <label for="guests">Stay : @ViewBag.stay <span>days</span> </label></br>
+                        <label for="guests">People : @ViewBag.maxPeople </label></br>
+                        <label for="guests">Prices : @ViewBag.totalPrice</label></br>
+                    </div>
+
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
